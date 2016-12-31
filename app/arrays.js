@@ -76,6 +76,12 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences: function(arr, target) {
+    return arr.reduce((accumulator, currentValue, index) => {
+      if (currentValue === target) {
+        accumulator.push(index);
+      }
 
+      return accumulator;
+    }, []);
   }
 };

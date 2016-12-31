@@ -58,7 +58,13 @@ exports.arraysAnswers = {
   },
 
   count: function(arr, item) {
+    return arr.reduce((accumulator, currentValue) => {
+      if (currentValue === item) {
+        return accumulator + 1;
+      }
 
+      return accumulator;
+    }, 0);
   },
 
   duplicates: function(arr) {

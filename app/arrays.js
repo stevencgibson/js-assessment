@@ -10,7 +10,7 @@ exports.arraysAnswers = {
   },
 
   remove: function(arr, item) {
-
+    return arr.filter((currentItem) => currentItem !== item);
   },
 
   removeWithoutCopy: function(arr, item) {

@@ -6,7 +6,7 @@ exports.arraysAnswers = {
   },
 
   sum: function(arr) {
-
+    return arr.reduce((accumulator, currentValue) => accumulator + currentValue);
   },
 
   remove: function(arr, item) {

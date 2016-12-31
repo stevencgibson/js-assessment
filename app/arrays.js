@@ -68,7 +68,17 @@ exports.arraysAnswers = {
   },
 
   duplicates: function(arr) {
+    return arr.filter((currentValue) => {
+      if (this.count(arr, currentValue) > 1) {
+        return currentValue;
+      }
+    }, this).reduce((accumulator, currentValue) => {
+      if (accumulator.indexOf(currentValue) === -1) {
+        accumulator.push(currentValue);
+      }
 
+      return accumulator;
+    }, []);
   },
 
   square: function(arr) {

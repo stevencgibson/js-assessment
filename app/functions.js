@@ -26,7 +26,9 @@ exports.functionsAnswers = {
   },
 
   useArguments: function() {
-
+    return Array.prototype.slice.call(arguments).reduce((accumulator, currentValue) => {
+      return accumulator + currentValue;
+    });
   },
 
   callIt: function(fn) {

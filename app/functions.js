@@ -37,7 +37,11 @@ exports.functionsAnswers = {
   },
 
   partialUsingArguments: function(fn) {
+    const argsMinusFn = Array.prototype.slice.call(arguments, 1, arguments.length);
 
+    return function() {
+      return fn.apply(null, argsMinusFn.concat(Array.prototype.slice.call(arguments)));
+    };
   },
 
   curryIt: function(fn) {

@@ -32,7 +32,8 @@ exports.functionsAnswers = {
   },
 
   callIt: function(fn) {
-
+    const argsMinusFn = Array.prototype.slice.call(arguments, 1, arguments.length);
+    return fn.apply(null, argsMinusFn);
   },
 
   partialUsingArguments: function(fn) {

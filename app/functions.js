@@ -12,7 +12,7 @@ exports.functionsAnswers = {
   functionFunction: function(str) {
     return function(str2) {
       return `${str}, ${str2}`;
-    }
+    };
   },
 
   makeClosures: function(arr, fn) {
@@ -20,7 +20,9 @@ exports.functionsAnswers = {
   },
 
   partial: function(fn, str1, str2) {
-
+    return function(str3) {
+      return fn.call(null, str1, str2, str3);
+    };
   },
 
   useArguments: function() {

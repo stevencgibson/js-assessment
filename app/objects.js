@@ -10,6 +10,14 @@ exports.objectsAnswers = {
   },
 
   iterate: function(obj) {
+    var res = [];
 
+    for (var prop in obj) {
+      if (obj.hasOwnProperty(prop)) {
+        res.push(prop + ': ' + obj[prop]);
+      }
+    }
+
+    return res;
   }
 };

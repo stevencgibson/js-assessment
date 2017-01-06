@@ -6,7 +6,9 @@ exports.objectsAnswers = {
   },
 
   alterObjects: function(constructor, greeting) {
+    constructor.prototype.greeting = greeting;
 
+    return new constructor();
   },
 
   iterate: function(obj) {
